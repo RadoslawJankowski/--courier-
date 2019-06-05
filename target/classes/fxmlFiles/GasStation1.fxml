@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="backgroundForGasStation" stylesheets="@../application.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.gasStationController.GasStationController">
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+    <Button fx:id="fillButton" layoutX="374.0" layoutY="311.0" mnemonicParsing="false" onAction="#fillFuelButtonPushed"
+            opacity="0.0" prefHeight="94.0" prefWidth="147.0" text="Button">
+        <cursor>
+          <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <!--suppress JavaFxUnresolvedFxIdReference -->
+    <ProgressBar fx:id="fillProgress" layoutX="240.0" layoutY="261.0" opacity="0.0" prefHeight="49.0" prefWidth="319.0"
+                 progress="0.0"/>
+    <Button fx:id="backOnStreetButton" layoutY="429.0" mnemonicParsing="false" onAction="#backOnTheStreetPushed"
+            prefHeight="170.0" prefWidth="214.0" styleClass="backToStreetFromGasStation">
+        <cursor>
+          <Cursor fx:constant="HAND"/>
+        </cursor>
+    </Button>
+    <ImageView fitHeight="76.0" fitWidth="81.0" layoutX="672.0" layoutY="447.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../images/panel/money.png"/>
+    </ImageView>
+    <Label fx:id="moneyLabel" layoutX="658.0" layoutY="546.0" prefHeight="30.0" prefWidth="101.0"/>
+    <Label fx:id="fuelPriceLabel" layoutX="675.0" layoutY="152.0" prefHeight="30.0" prefWidth="61.0" rotate="-29.0"
+           textFill="#f3ff0e"/>
+    <Label fx:id="timeToEndThreadLabel" layoutX="202.0" layoutY="227.0" prefHeight="68.0" prefWidth="490.0"
+           textFill="WHITE">
+        <font>
+          <Font size="31.0"/>
+        </font>
+    </Label>
+</AnchorPane>

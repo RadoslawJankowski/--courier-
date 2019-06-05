@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<!--suppress ALL -->
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+           prefWidth="1240.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.gameWindowController.GameWindowController">
+    <AnchorPane fx:id="anchorPane">
+        <Button fx:id="gasButton" layoutX="1073.0" layoutY="396.0" mnemonicParsing="false"
+                onAction="#accelerationButtonPushed" prefHeight="69.0" prefWidth="151.0"
+                stylesheets="@../application.css" text="Gas">
+            <font>
+                <Font name="Century Gothic Italic" size="20.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="69.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/car/gas-pedal.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets right="10.0"/>
+            </padding>
+        </Button>
+        <Pane layoutX="204.0" layoutY="169.0" prefHeight="427.0" prefWidth="540.0">
+            <ImageView fx:id="smoke" fitHeight="1.0" fitWidth="1.0" layoutX="269.0" layoutY="277.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/car/exhaust.png"/>
+            </ImageView>
+            <ImageView fitHeight="267.0" fitWidth="200.0" layoutX="190.0" layoutY="78.0" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="@../images/car/car.png"/>
+            </ImageView>
+            <Label fx:id="timeToEndThreadLabel" layoutX="103.0" layoutY="14.0" prefHeight="30.0"
+                   prefWidth="348.0"/>
+            <Pane fx:id="possibleRoutsDetailsPane" layoutX="30.0" layoutY="29.0" opacity="0.0"
+                  prefHeight="147.0" prefWidth="190.0">
+                <Label fx:id="routsTypeLabel" layoutX="80.0" prefHeight="30.0" prefWidth="101.0"/>
+                <Text layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type: "
+                      wrappingWidth="46.000011563301086"/>
+                <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance: "
+                      wrappingWidth="66.13666892051697"/>
+                <Text layoutX="14.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profit: "
+                      wrappingWidth="45.999993085861206"/>
+                <Label fx:id="routsDistanceLabel" layoutX="80.0" layoutY="30.0" prefHeight="30.0"
+                       prefWidth="101.0"/>
+                <Label fx:id="routsProfitLabel" layoutX="80.0" layoutY="59.0" prefHeight="30.0"
+                       prefWidth="101.0"/>
+                <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false"
+                        onAction="#acceptRoutButtonPushed" prefHeight="32.0" prefWidth="101.0"
+                        text="Accept"/>
+            </Pane>
+        </Pane>
+        <Button fx:id="breakPedal" layoutX="909.0" layoutY="396.0" mnemonicParsing="false"
+                onAction="#breakPedalButtonPushed" prefHeight="69.0" prefWidth="151.0" text="Break">
+            <font>
+                <Font name="Century Gothic Italic" size="20.0"/>
+            </font>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <graphic>
+                <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/car/break-pedal.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets right="1.0"/>
+            </padding>
+        </Button>
+        <Button fx:id="startEngineButton" layoutX="744.0" layoutY="396.0" mnemonicParsing="false"
+                onAction="#startEngineButtonPushed" prefHeight="69.0" prefWidth="151.0" text="Start the engine"/>
+        <Label layoutX="14.0" layoutY="234.0" prefHeight="30.0" prefWidth="190.0"/>
+        <!--suppress JavaFxUnresolvedFxIdReference -->
+        <ProgressIndicator fx:id="toGasStationInticator" layoutX="274.0" layoutY="87.0" opacity="0.0"
+                           prefHeight="48.0" prefWidth="52.0" progress="0.0"/>
+        <Button fx:id="driveToGasStationButton" layoutX="1073.0" layoutY="282.0" mnemonicParsing="false"
+                onAction="#driveToGasStationButtonPushed" prefHeight="40.0" prefWidth="150.0"
+                text="Drive to gas station"/>
+        <Button fx:id="goToGasStationButton" layoutX="1073.0" layoutY="329.0" mnemonicParsing="false"
+                onAction="#toGasStationOnFootButtonPushed" prefHeight="40.0" prefWidth="150.0"
+                text="Go on gas station"/>
+        <ImageView fitHeight="101.0" fitWidth="105.0" layoutX="1098.0" layoutY="181.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../images/gasStation/go-to-gas-station.png"/>
+        </ImageView>
+        <Pane fx:id="topPane" prefHeight="60.0" prefWidth="1240.0">
+            <Label fx:id="moneyLabel" layoutX="1167.0" layoutY="17.0" prefHeight="30.0" prefWidth="73.0"
+                   textAlignment="RIGHT"/>
+            <ImageView fitHeight="46.0" fitWidth="47.0" layoutX="1111.0" layoutY="6.0" pickOnBounds="true"
+                       preserveRatio="true">
+                <Image url="@../images/panel/money.png"/>
+            </ImageView>
+            <Text layoutX="23.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Speed"
+                  wrappingWidth="80.53671264648438"/>
+            <Label fx:id="speedLabel" layoutX="92.0" layoutY="9.0" prefHeight="40.0" prefWidth="126.0"/>
+            <Text layoutX="189.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mileage"
+                  wrappingWidth="58.13671875"/>
+            <Label fx:id="mileageLabel" layoutX="256.0" layoutY="9.0" prefHeight="40.0" prefWidth="142.0"/>
+            <Text fx:id="fuelText" layoutX="385.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Fuel" wrappingWidth="58.136725425720215"/>
+            <Label fx:id="fuelLabel" layoutX="431.0" layoutY="8.0" prefHeight="40.0" prefWidth="73.0"/>
+            <ImageView fx:id="reserveIcon" fitHeight="46.0" fitWidth="58.0" layoutX="512.0" layoutY="9.0"
+                       opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/panel/Low_fuel.png"/>
+            </ImageView>
+            <ImageView fx:id="imageRange" fitHeight="46.0" fitWidth="58.0" layoutX="875.0" layoutY="7.0"
+                       pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/panel/range.png"/>
+            </ImageView>
+            <Label fx:id="toGoLabel" layoutX="921.0" layoutY="15.0" prefHeight="30.0" prefWidth="190.0"/>
+        </Pane>
+        <Button fx:id="stopEngineButton" layoutX="744.0" layoutY="314.0" mnemonicParsing="false"
+                onAction="#stopEngineButtonPushed" prefHeight="69.0" prefWidth="151.0" text="Stop the engine"/>
+        <Pane fx:id="menuPane" layoutX="23.0" layoutY="134.0" prefHeight="446.0" prefWidth="200.0">
+            <Button fx:id="deliveryThePackButton" layoutX="14.0" layoutY="26.0" mnemonicParsing="false"
+                    onAction="#showAndHideRoutsButtons" prefHeight="32.0" prefWidth="172.0"
+                    text="Delivery the pack"/>
+            <ImageView fx:id="mediumRoutImage" fitHeight="101.0" fitWidth="118.0" layoutX="41.0" layoutY="185.0"
+                       opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/panel/medium-distance.png"/>
+            </ImageView>
+            <ImageView fx:id="shortRoutImage" fitHeight="101.0" fitWidth="118.0" layoutX="41.0" layoutY="65.0"
+                       opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/panel/short-distance.png"/>
+            </ImageView>
+            <ImageView fx:id="longRoutImage" fitHeight="101.0" fitWidth="118.0" layoutX="41.0" layoutY="302.0"
+                       opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/panel/long-distance.png"/>
+            </ImageView>
+            <Button fx:id="shortRoutButton" disable="true" layoutX="41.0" layoutY="140.0"
+                    mnemonicParsing="false" onAction="#createShortRoutButtonPushed" opacity="0.0"
+                    prefHeight="32.0" prefWidth="118.0" text="Short rout"/>
+            <Button fx:id="mediumRoutButton" disable="true" layoutX="41.0" layoutY="260.0"
+                    mnemonicParsing="false" onAction="#createMediumRoutButtonPushed" opacity="0.0"
+                    prefHeight="32.0" prefWidth="118.0" text="Medium rout"/>
+            <Button fx:id="longRoutButton" disable="true" layoutX="41.0" layoutY="386.0" mnemonicParsing="false"
+                    onAction="#createLongRoutButtonPushed" opacity="0.0" prefHeight="32.0" prefWidth="118.0"
+                    text="Long rout"/>
+        </Pane>
+        <Pane fx:id="currentRoutPane" layoutX="985.0" layoutY="78.0" opacity="0.0" prefHeight="84.0"
+              prefWidth="238.0">
+            <Text layoutX="87.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current rout"/>
+            <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Remaining distance:" wrappingWidth="141.99999392032623"/>
+            <Label fx:id="remainingDistanceLabel" layoutX="156.0" layoutY="23.0" prefHeight="18.0"
+                   prefWidth="90.0"/>
+            <Text layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profit for rout:"
+                  wrappingWidth="108.79991054534912"/>
+            <Label fx:id="profitForRoutLabel" layoutX="156.0" layoutY="46.0" prefHeight="18.0"
+                   prefWidth="90.0"/>
+        </Pane>
+        <Pane fx:id="finishedRoutPane" layoutX="367.0" layoutY="35.0" opacity="0.0" prefHeight="254.0"
+              prefWidth="505.0">
+            <rotationAxis>
+                <Point3D/>
+            </rotationAxis>
+            <Text layoutX="28.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="The package has been delivered! Here's your payment!" textAlignment="CENTER"
+                  wrappingWidth="448.3830966949463">
+                <font>
+                    <Font size="29.0"/>
+                </font>
+            </Text>
+            <Button fx:id="takeMoneyButton" disable="true" layoutX="166.0" layoutY="127.0"
+                    mnemonicParsing="false" onAction="#takeMoneyButtonPushed" prefHeight="70.0"
+                    prefWidth="172.0" text="Take money">
+                <font>
+                    <Font size="21.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+            </Button>
+        </Pane>
+    </AnchorPane>
+</StackPane>

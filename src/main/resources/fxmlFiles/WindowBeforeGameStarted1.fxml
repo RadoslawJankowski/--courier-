@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.windowBeforeGame.WindowBeforeGameStartedController">
+   <top>
+       <AnchorPane prefHeight="98.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <Text layoutX="228.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER"
+                 wrappingWidth="343.73675537109375">
+              <font>
+                  <Font size="29.0"/>
+              </font>
+           </Text>
+           <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#startGameButtonPushed"
+                   prefHeight="70.0" prefWidth="186.0" text="Start" textAlignment="JUSTIFY" textFill="#ac2929">
+              <padding>
+                  <Insets left="80.0"/>
+              </padding>
+           </Button>
+           <ImageView fitHeight="62.0" fitWidth="76.0" layoutX="32.0" layoutY="18.0" pickOnBounds="true"
+                      preserveRatio="true">
+               <Image url="@../images/startWindow/transport_icon.png"/>
+           </ImageView>
+       </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="302.0" prefWidth="97.0" styleClass="backgroundForMainMenu" stylesheets="@../application.css" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

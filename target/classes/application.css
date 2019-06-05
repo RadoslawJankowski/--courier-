@@ -1,0 +1,20 @@
+.backgroundForMainMenu{
+    -fx-background-image: url('images/startWindow/kurier.jpg');
+    -fx-background-size: 60% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.backgroundForGasStation{
+    -fx-background-image: url('images/gasStation/petrol-station.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.backToStreetFromGasStation{;
+    -fx-background-image: url('images/gasStation/back-on-strret.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

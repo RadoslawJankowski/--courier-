@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <pattern value="gasStation.GasStationInterface" method="randomPrice" />
+    <pattern value="gasStation.GasStationInterface" method="fillFuel" />
+    <pattern value="vehicle.VehicleInterface" method="driveToGasStation" />
+    <pattern value="vehicle.VehicleInterface" method="error" />
+    <pattern value="vehicle.VehicleInterface" method="start" />
+    <pattern value="vehicle.VehicleInterface" method="stop" />
+    <pattern value="vehicle.VehicleInterface" method="turnOfEngineIfNoFuel" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleAccelerateSpeed" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleDistancePerSec" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleFuelUsagePerSecond" />
+    <pattern value="vehicle.VehicleInterface" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleMileage" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleReduceSpeed" />
+    <pattern value="vehicle.VehicleInterface" method="vehicleReserve" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
